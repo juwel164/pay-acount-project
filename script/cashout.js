@@ -19,9 +19,8 @@ document
             document.getElementById("number_input").value = "";
             document.getElementById("amount_input").value = "";
             document.getElementById("pin_input").value = "";
-
             alert(`${convertedAmount}$ cashout done from your account.`);
-          } else if (!convertedPin) {
+          } else if (pin === "") {
             alert("Please enter your PIN");
           } else {
             alert("Your PIN is incorrect");
