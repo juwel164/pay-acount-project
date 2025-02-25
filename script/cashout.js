@@ -11,26 +11,26 @@ document
     const convertedBalance = parseFloat(balance);
 
     if (number === "01960801362" && number.length === 11) {
-      if (convertedAmount < convertedBalance) {
         if (convertedAmount) {
-          if (convertedPin === 1234) {
-            const sum = convertedBalance - convertedAmount;
-            document.getElementById("main_balance").innerText = sum;
-            document.getElementById("cashout_number_input").value = "";
-            document.getElementById("cashout_amount_input").value = "";
-            document.getElementById("cashout_pin_input").value = "";
-            alert(`${convertedAmount}$ cashout done from your account.`);
-          } else if (!convertedPin) {
-            alert("Please enter your PIN");
-          } else {
-            alert("Your PIN is incorrect");
+          if(convertedAmount < convertedBalance){
+            if (convertedPin === 1234) {
+              const sum = convertedBalance - convertedAmount;
+              document.getElementById("main_balance").innerText = sum;
+              document.getElementById("cashout_number_input").value = "";
+              document.getElementById("cashout_amount_input").value = "";
+              document.getElementById("cashout_pin_input").value = "";
+              alert(`${convertedAmount}$ cashout done from your account.`);
+            } else if (!convertedPin) {
+              alert("Please enter your PIN");
+            } else {
+              alert("Your PIN is incorrect");
+            }
+          }else{
+            alert('Your balance is insufficient')
           }
         } else {
           alert("Please enter your amount");
         }
-      } else {
-        alert("You have not sufficient balance");
-      }
     } else if (number === "") {
       alert("Please enter your number");
     } else {

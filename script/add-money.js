@@ -18,7 +18,6 @@ document
           document.getElementById("number_input").value = "";
           document.getElementById("pin_input").value = "";
           document.getElementById("amount_input").value = "";
-
           alert(`${convertedAmount}$ added to your account.`);
         } else if (!convertedPin) {
           alert("Please enter your PIN");
