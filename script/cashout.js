@@ -2,7 +2,7 @@ document
   .getElementById("cash_out_btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const pin = document.getElementById("pin_input").value;
+    const pin = document.getElementById("cashout_pin_input").value;
     const convertedPin = parseInt(pin);
     const number = document.getElementById("cashout_number_input").value;
     const amount = document.getElementById("cashout_amount_input").value;
@@ -16,9 +16,9 @@ document
           if (convertedPin === 1234) {
             const sum = convertedBalance - convertedAmount;
             document.getElementById("main_balance").innerText = sum;
-            document.getElementById("number_input").value = "";
-            document.getElementById("amount_input").value = "";
-            document.getElementById("pin_input").value = "";
+            document.getElementById("cashout_number_input").value = "";
+            document.getElementById("cashout_amount_input").value = "";
+            document.getElementById("cashout_pin_input").value = "";
             alert(`${convertedAmount}$ cashout done from your account.`);
           } else if (pin === "") {
             alert("Please enter your PIN");
