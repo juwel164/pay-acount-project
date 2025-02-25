@@ -20,8 +20,8 @@ document
             document.getElementById("cashout_amount_input").value = "";
             document.getElementById("cashout_pin_input").value = "";
             alert(`${convertedAmount}$ cashout done from your account.`);
-          } else if (pin === "") {
-            alert("Please enter your PIN");
+          // } else if (pin === "") {
+          //   alert("Please enter your PIN");
           } else {
             alert("Your PIN is incorrect");
           }
