@@ -3,8 +3,9 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     const numberInput = document.getElementById("number_input").value;
-    const pinInput = document.getElementById("pin_input").value;
-    const convertedPin = parseInt(pinInput);
+    const convertedPin = getInputValueById('pin_input');
+    // const pinInput = document.getElementById("pin_input").value;
+    // const convertedPin = parseInt(pinInput);
 
     if (numberInput.length === 11 && numberInput === "01960801362") {
       if (convertedPin === 1234) {
