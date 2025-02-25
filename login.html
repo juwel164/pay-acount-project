@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body  class="bg-slate-700">
+    <main class="bg-slate-100 max-w-md mx-auto min-h-screen container">
+      <nav class="flex justify-center items-center flex-col pt-20">
+        <div class="logo_image w-3/4 mx-auto flex flex-col justify-center items-center pt-10 0">
+          <img src="assets/Rectangle 1.png" alt="" class="w-48 ">
+          <img src="assets/sign.png" alt="" class="relative -top-40">
+
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm relative -mt-32">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Mobile Number</span>
+                    </label>
+                    <input type="text" placeholder="Enter your number" class="input input-bordered bg-slate-100 border-none" required  id="number_input"/>
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">4 Digit PIN</span>
+                    </label>
+                    <input type="text" placeholder="Enter your PIN" class="input input-bordered bg-slate-100 border-none" required id="pin_input"/>
+                    <label class="label">
+                      <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button class="btn bg-[#0874F2] text-white" id="login_btn">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+
+
+    <script src="script/login.js"></script>
+  </body>
+</html>
