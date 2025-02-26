@@ -1,3 +1,5 @@
+changeToggleDisplayValue("transaction_box", "none");
+
 document
   .getElementById("cash_out_btn")
   .addEventListener("click", function (event) {
@@ -12,11 +14,27 @@ document
         if (convertedAmount < convertedBalance) {
           if (convertedPin === 1234) {
             const sum = convertedBalance - convertedAmount;
-            setInnerTextByIdAndValue('main_balance', sum);
+            setInnerTextByIdAndValue("main_balance", sum);
             document.getElementById("cashout_number_input").value = "";
             document.getElementById("cashout_amount_input").value = "";
             document.getElementById("cashout_pin_input").value = "";
             alert(`${convertedAmount}$ cashout done from your account.`);
+            document.getElementById("transaction_card");
+            document.getElementById("left_tran_content");
+            const transactionDetails = document.getElementById(
+              "transaction_details"
+            );
+
+            const h2 = document.createElement("h2");
+            h2.innerText = `${convertedAmount}$ Cashout`;
+            h2.classList = "text-lg font-bold text-black";
+            const p = document.createElement("p");
+            p.innerText = new Date();
+            p.classList = "text-xs";
+            transactionDetails.appendChild(h2);
+            transactionDetails.appendChild(p);
+            changeToggleDisplayValue("transaction_box", "flex");
+            
           } else if (!convertedPin) {
             alert("Please enter your PIN");
           } else {

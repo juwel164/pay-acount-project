@@ -28,15 +28,17 @@
       </nav>
 
       <!-- Card Section -->
-      <section class="card_section pt-16 bg-white py-10 px-4">
+      <section class="card_section pt-10 bg-white py-10 px-4">
         <div class="card_title space-y-3">
           <h1 class="text-3xl font-bold">Welcome to Payooo!</h1>
-          <p>Enjoy easy and convenient financial services with us. <br> Cashout charge is low. </p>
+          <p>Enjoy easy and convenient financial services with us.<br> Cashout charge is low. 
+          <br><span class="text-red-500 text-xs">Note: Only Add Money, Cashout, Transacion Available</span>
+          </p>
         </div>
 
         <!-- Cards -->
 
-        <div class="cards grid grid-cols-3 pt-10 gap-5">
+        <div class="cards grid grid-cols-3 grid-rows-2 pt-10 gap-5">
           <div class="card flex flex-col justify-center items-center border rounded-sm p-3 gap-1 cursor-pointer hover:bg-sky-100" id="add_money_card">
             <img src="assets/wallet 1.png" alt="" class="w-6">
             <h2 class="font-semibold text-xs text-[#666768]">Add Money</h2>
@@ -74,11 +76,11 @@
         <div class="card bg-base-100 shrink-0 shadow-sm">
           <form class="card-body">
             <div class="form-control">
-              <select class="select select-bordered w-full bg-slate-100 border-none">
+              <select class="select select-bordered w-full bg-slate-100 border-none" id="bank">
                 <option disabled selected>Select Bank</option>
-                <option value="Bkash">Bkash</option>
-                <option value="Nagad">Nagad</option>
-                <option value="Rocket">Rocket</option>
+                <option value="Bkash" id="bkash">Bkash</option>
+                <option value="Nagad" id="nagad">Nagad</option>
+                <option value="Rocket" id="rocket">Rocket</option>
               </select>
             </div>
             <div class="form-control">
@@ -137,80 +139,24 @@
 
       <!-- Transaction History Section -->
 
-      <section class="tran_history px-4 pb-5 space-y-4 pt-16" id="transaction">
+      <section class="tran_history px-4 pb-5 space-y-4 pt-16" id="transaction_section">
         <div class="tran_title flex justify-between items-center mb-6">
         <h2 class="font-bold text-2xl">Transaction History</h2>
         <h2 class="text-sm font-semibold text-slate-500">Vew All</h2>
         </div>
-        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border">
-          <div class="left_content flex justify-center items-center gap-5">
-            <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center">
+        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border" id="transaction_box">
+          <div class="left_content flex justify-center items-center gap-5" id="left_tran_content">
+            <!-- <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center" id="transaction_image">
               <img src="assets/wallet 1.png" alt="">
-            </div>
-            <div class="tran_details">
-              <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
-              <p class="text-xs">Today 01:44 AM</p>
+            </div> -->
+            <div class="tran_details" id="transaction_details">
+              <!-- <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
+              <p class="text-xs">Today 01:44 AM</p> -->
             </div>
           </div>
-          <div class="tran_menu">
+          <!-- <div class="tran_menu">
             <img src="assets/option.png" alt="">
-          </div>
-        </div>
-        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border">
-          <div class="left_content flex justify-center items-center gap-5">
-            <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center">
-              <img src="assets/wallet 1.png" alt="">
-            </div>
-            <div class="tran_details">
-              <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
-              <p class="text-xs">Today 01:44 AM</p>
-            </div>
-          </div>
-          <div class="tran_menu">
-            <img src="assets/option.png" alt="">
-          </div>
-        </div>
-        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border">
-          <div class="left_content flex justify-center items-center gap-5">
-            <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center">
-              <img src="assets/wallet 1.png" alt="">
-            </div>
-            <div class="tran_details">
-              <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
-              <p class="text-xs">Today 01:44 AM</p>
-            </div>
-          </div>
-          <div class="tran_menu">
-            <img src="assets/option.png" alt="">
-          </div>
-        </div>
-        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border">
-          <div class="left_content flex justify-center items-center gap-5">
-            <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center">
-              <img src="assets/wallet 1.png" alt="">
-            </div>
-            <div class="tran_details">
-              <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
-              <p class="text-xs">Today 01:44 AM</p>
-            </div>
-          </div>
-          <div class="tran_menu">
-            <img src="assets/option.png" alt="">
-          </div>
-        </div>
-        <div class="tran_card flex justify-between items-center bg-white p-3 rounded-md border">
-          <div class="left_content flex justify-center items-center gap-5">
-            <div class="tran_image  w-12 h-12 rounded-[50%] bg-slate-100 flex justify-center items-center">
-              <img src="assets/wallet 1.png" alt="">
-            </div>
-            <div class="tran_details">
-              <h2 class="text-lg font-bold text-black">Electricity Bill</h2>
-              <p class="text-xs">Today 01:44 AM</p>
-            </div>
-          </div>
-          <div class="tran_menu">
-            <img src="assets/option.png" alt="">
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
