@@ -9,7 +9,7 @@ document
     const convertedAmount = getInputValueById("cashout_amount_input");
     const convertedBalance = getInnerTextById("main_balance");
 
-    if (number === "01960801362" && number.length === 11) {
+    if (number.length === 11) {
       if (convertedAmount) {
         if (convertedAmount < convertedBalance) {
           if (convertedPin === 1234) {
@@ -26,7 +26,7 @@ document
             );
 
             const h2 = document.createElement("h2");
-            h2.innerText = `${convertedAmount}$ Cashout`;
+            h2.innerText = `${convertedAmount}$ Cashout to ${number}`;
             h2.classList = "text-lg font-bold text-black";
             const p = document.createElement("p");
             p.innerText = new Date();

@@ -10,7 +10,7 @@ document
     const convertedAmount = getInputValueById("amount_input");
     const convertedBalance = getInnerTextById("main_balance");
     if(bankOption !== 'Select Bank'){
-      if (number === "01960801362" && number.length === 11) {
+      if (number.length === 11) {
         if (convertedAmount) {
           if (convertedPin === 1234) {
             const sum = convertedAmount + convertedBalance;
