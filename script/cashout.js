@@ -30,7 +30,7 @@ document
             h2.classList = "text-lg font-bold text-black";
             const p = document.createElement("p");
             p.innerText = new Date();
-            p.classList = "text-xs";
+            p.classList = "text-xs mb-5";
             transactionDetails.appendChild(h2);
             transactionDetails.appendChild(p);
             changeToggleDisplayValue("transaction_box", "flex");
